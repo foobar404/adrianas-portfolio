@@ -217,22 +217,34 @@ video:focus-visible {
   min-height: 3rem;
   align-items: center;
   justify-content: center;
-  gap: 1.2rem;
+  gap: 0.65rem;
   padding: 0.8rem 1.1rem;
-  border: 1px solid transparent;
+  border: 3px solid;
+  border-radius: 999px;
+  box-shadow: 0 0.75rem 1.5rem rgb(192 132 252 / 10%);
   font-size: 0.82rem;
   font-weight: 700;
   text-decoration: none;
-  transition: background-color 160ms ease, color 160ms ease;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.button__icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: 0 0 auto;
 }
 
 .button--light {
+  border-color: var(--accent);
   color: #170c20;
   background: var(--accent);
 }
 
 .button--light:hover {
+  border-color: var(--accent-strong);
   background: var(--accent-strong);
+  box-shadow: 0 1rem 1.75rem rgb(192 132 252 / 20%);
+  transform: translateY(-2px);
 }
 
 .button--outline {
@@ -244,6 +256,8 @@ video:focus-visible {
 .button--outline:hover {
   color: #170c20;
   background: var(--accent);
+  box-shadow: 0 1rem 1.75rem rgb(192 132 252 / 20%);
+  transform: translateY(-2px);
 }
 
 .hero__index {
