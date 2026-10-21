@@ -128,13 +128,14 @@ video:focus-visible {
   text-underline-offset: 0.25em;
 }
 
-.nav-contact span,
 .social-links span {
   margin-left: 0.2rem;
 }
 
 .nav-contact {
   color: var(--accent);
+  font-size: 0.72rem;
+  white-space: nowrap;
 }
 
 .menu-toggle {
@@ -161,16 +162,16 @@ video:focus-visible {
   inset: 0;
 }
 
-.hero__video {
+.hero__embed {
   position: absolute;
   z-index: -2;
-  width: 100%;
-  height: 100%;
-  inset: 0;
-}
-
-.hero__video {
-  object-fit: cover;
+  top: 50%;
+  left: 50%;
+  width: max(100vw, 135.12svh);
+  height: max(76svh, 56.25vw);
+  transform: translate(-50%, -50%);
+  border: 0;
+  pointer-events: none;
 }
 
 .hero__content {
@@ -580,6 +581,13 @@ code {
 
 .contact-band__copy {
   max-width: 48rem;
+}
+
+.contact-band__email {
+  margin: 1.5rem 0 0;
+  color: var(--accent);
+  font-size: 1.05rem;
+  overflow-wrap: anywhere;
 }
 
 .contact-band .eyebrow {
